@@ -16,9 +16,9 @@
         $call = curl_init();
         curl_setopt_array($call, [
             CURLOPT_RETURNTRANSFER => 1,
-            CURLOPT_URL => '',
+            CURLOPT_URL => 'http://127.0.0.1:5000/call',
             CURLOPT_POST => 1,
-            CURLOPT_POSTFIELDS => "phone=" . $_POST['phone']."&message=".$_POST['message'],
+            CURLOPT_POSTFIELDS => 'phone=' . $_POST['phone'].'&message="'.$_POST['message'].'"',
         ]);
         curl_exec($call);
     }
